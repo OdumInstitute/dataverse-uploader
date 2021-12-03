@@ -57,6 +57,7 @@ if __name__ == '__main__':
     delete_api = dataverse_server + \
         '/dvn/api/data-deposit/v1.1/swordv2/edit-media/file/'
     for f in files_list:
+        print(f)
         fileid = f["dataFile"]["id"]
         resp = requests.delete(
             delete_api + str(fileid), \
